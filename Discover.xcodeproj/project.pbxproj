@@ -19,6 +19,10 @@
 		86BE99F319EED600004BFC51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BE99DB19EED5FF004BFC51 /* UIKit.framework */; };
 		86BE99FB19EED600004BFC51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86BE99F919EED600004BFC51 /* InfoPlist.strings */; };
 		86BE99FD19EED600004BFC51 /* DiscoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE99FC19EED600004BFC51 /* DiscoverTests.m */; };
+		86BE9A0819EED62F004BFC51 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE9A0719EED62F004BFC51 /* DiscoverViewController.m */; };
+		86BE9A6119EEDA85004BFC51 /* NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE9A6019EEDA85004BFC51 /* NavigationItem.m */; };
+		86BE9A6419EEDAE0004BFC51 /* BookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE9A6319EEDAE0004BFC51 /* BookmarkView.m */; };
+		86BE9A6719EEDAF8004BFC51 /* SearchBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE9A6619EEDAF8004BFC51 /* SearchBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,14 @@
 		86BE99F819EED600004BFC51 /* DiscoverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiscoverTests-Info.plist"; sourceTree = "<group>"; };
 		86BE99FA19EED600004BFC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86BE99FC19EED600004BFC51 /* DiscoverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverTests.m; sourceTree = "<group>"; };
+		86BE9A0619EED62F004BFC51 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		86BE9A0719EED62F004BFC51 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		86BE9A5F19EEDA85004BFC51 /* NavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationItem.h; path = Components/Navigation/NavigationItem.h; sourceTree = "<group>"; };
+		86BE9A6019EEDA85004BFC51 /* NavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationItem.m; path = Components/Navigation/NavigationItem.m; sourceTree = "<group>"; };
+		86BE9A6219EEDAE0004BFC51 /* BookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkView.h; path = Components/Bookmark/BookmarkView.h; sourceTree = "<group>"; };
+		86BE9A6319EEDAE0004BFC51 /* BookmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkView.m; path = Components/Bookmark/BookmarkView.m; sourceTree = "<group>"; };
+		86BE9A6519EEDAF8004BFC51 /* SearchBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBox.h; path = Components/SearchBox/SearchBox.h; sourceTree = "<group>"; };
+		86BE9A6619EEDAF8004BFC51 /* SearchBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBox.m; path = Components/SearchBox/SearchBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +119,13 @@
 		86BE99DD19EED600004BFC51 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				86BE9A5B19EED967004BFC51 /* Components */,
 				86BE99E619EED600004BFC51 /* AppDelegate.h */,
 				86BE99E719EED600004BFC51 /* AppDelegate.m */,
 				86BE99E919EED600004BFC51 /* Images.xcassets */,
 				86BE99DE19EED600004BFC51 /* Supporting Files */,
+				86BE9A0619EED62F004BFC51 /* DiscoverViewController.h */,
+				86BE9A0719EED62F004BFC51 /* DiscoverViewController.m */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -142,6 +157,43 @@
 				86BE99F919EED600004BFC51 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86BE9A5B19EED967004BFC51 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				86BE9A5E19EEDA1C004BFC51 /* SearchBox */,
+				86BE9A5D19EEDA0F004BFC51 /* Bookmark */,
+				86BE9A5C19EED9C6004BFC51 /* Navigation */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		86BE9A5C19EED9C6004BFC51 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				86BE9A5F19EEDA85004BFC51 /* NavigationItem.h */,
+				86BE9A6019EEDA85004BFC51 /* NavigationItem.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		86BE9A5D19EEDA0F004BFC51 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				86BE9A6219EEDAE0004BFC51 /* BookmarkView.h */,
+				86BE9A6319EEDAE0004BFC51 /* BookmarkView.m */,
+			);
+			name = Bookmark;
+			sourceTree = "<group>";
+		};
+		86BE9A5E19EEDA1C004BFC51 /* SearchBox */ = {
+			isa = PBXGroup;
+			children = (
+				86BE9A6519EEDAF8004BFC51 /* SearchBox.h */,
+				86BE9A6619EEDAF8004BFC51 /* SearchBox.m */,
+			);
+			name = SearchBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BE9A6419EEDAE0004BFC51 /* BookmarkView.m in Sources */,
 				86BE99E819EED600004BFC51 /* AppDelegate.m in Sources */,
+				86BE9A0819EED62F004BFC51 /* DiscoverViewController.m in Sources */,
+				86BE9A6119EEDA85004BFC51 /* NavigationItem.m in Sources */,
 				86BE99E419EED600004BFC51 /* main.m in Sources */,
+				86BE9A6719EEDAF8004BFC51 /* SearchBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
